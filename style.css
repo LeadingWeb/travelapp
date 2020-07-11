@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+html{
+    --accent: #EA918D;
+    --accentHover: #DE8A86;
+    --dark: #304659;
+    --dark80: rgba(48, 70, 89, .8);
+    --dark60: rgba(48, 70, 89, .6);
+    --light: #f5f9fc;
+    --transition: all 0.3s ease 0s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    background: 
+        linear-gradient(
+            var(--dark60),
+            var(--dark60)
+        ),
+        url(./assets/img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+p, a, button {
+    font-family: "Lato", sans-serif;
+    color: var(--light);
+    text-decoration: none;
+}
+
+a, button, .logo {
+    cursor: pointer;
+}
+
+main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(60px, 1fr) repeat(6, minmax(50px, 190px)) minmax(60px, 1fr);
+}
+
+header {
+    grid-column: 2 / span 6;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--light);
+
+}
+.title {
+    color: var(--light);
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    padding: 5px;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+}
+
+.ham {
+    display: none;
+    color: var(--light);
+}
+
+.ham i:ac
+
+
+.links {
+    margin-left: auto;
+}
+
+.links a, .links button {
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: var(--transition);
+
+}
+
+.links a{
+    margin-right: 50px;
+
+}
+
+.links a:hover {
+    color: var(--accent);
+}
+
+.button_medium {
+    border: none;
+    background-color: var(--accent);
+    padding: 8px 25px;
+    transition: var(--transition);
+}
+
+.button_medium:hover {
+    background-color: var(--accentHover);
+}
+
+.hero {
+    grid-column: 2 / span 4;
+}
+
+.hero_font {
+    color: var(--light);
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 4.4rem;
+}
+
+.icons {
+    display: flex;
+    margin-top: 55px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+
+}
+
+.icon_i {
+    color: var(--dark);
+    font-size: 1.4rem;
+    padding: 7px;
+    background-color: var(--light);
+    border-radius: 50%;
+
+}
+.icon_info {
+    margin: 0 80px 0 20px;
+}
+
+.icon_top {
+    font-size: 1.06rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.icon_bottom {
+    font-size: 1.56rem;
+    font-weight: 700;
+}
+
+.features {
+    grid-column: 2 / span 7;
+    background-color: var(--dark80);
+    align-self: end;
+    padding: 40px 0 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.feature {
+    display: flex;
+    margin: 0 60px 40px 0;
+
+}
+
+.feature:nth-child(3) {
+    align-self: flex-start;
+}
+
+.feature img {
+    height: 100px;
+    margin-right: 20px;
+}
+
+.feature_info {
+    margin-top: 10px;
+
+}
+
+.feature_top, .feature_cta {
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.feature_cta {
+    cursor: pointer;
+    transition: var(--transition);
+
+}
+
+.feature_cta:hover {
+    color: var(--accent);
+}
+
+.feature_bottom {
+    width: 180px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.hamburger_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--dark);
+    
+    display: none;
+    flex-direction: column;
+}
+
+.close_menu {
+    width: 100%;
+    height: 10vh;
+}
+
+.close_menu i{
+    color: var(--light);
+    font-size: 2rem;
+    position: relative;
+    left: 70%;
+
+    padding: 20px 0;
+    transition: var(--transition);
+}
+.close_menu i:hover {
+    color: var(--accent);
+}
+
+.ham_link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.ham_link a:hover{
+    color: var(--accent);
+}
+
+.ham_link a, .ham_link button {
+    font-size: 1.6rem;
+    margin: 20px 0;
+}
+.ham_link button:hover {
+    background-color: var(--accentHover);
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .icon_top {
+        font-size: 1rem;
+    }
+
+    .icon_bottom {
+        font-size: 1.2rem;
+    }
+
+    .hero_font {
+        font-size: 2.1rem;
+    }
+
+    .features {
+        grid-column: 1 / span 8;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+    .hero {
+        grid-column: 2 / span 6;
+    }
+
+    .icons {
+        flex-direction: column;
+
+    }
+
+    .icon {
+        margin-bottom: 20px;
+    }
+    .title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .title {
+        font-size: 1.6rem;
+    }
+    nav {
+        justify-content: space-around;
+    }
+    .ham {
+        display: block;
+        justify-self: end
+    }
+    .ham i {
+        font-size: 1.6rem;
+        cursor: pointer;
+        transition: var(--transition);
+        color: var(--light);
+    }
+    .ham i:hover {
+        color: var(--accent);
+    }
+    .links {
+        display: none;
+    }
+}
